@@ -1,0 +1,18 @@
+# --- Streamlit app core ---
+streamlit>=1.33
+
+# --- YOLOv5 ---
+# You cloned the YOLOv5 repo; install its deps first
+-r yolov5/requirements.txt
+
+# IMPORTANT: Override OpenCV to headless (must come AFTER the line above)
+# to avoid GUI/GL issues on servers
+opencv-python-headless>=4.10.0
+
+# --- WebRTC / video ---
+streamlit-webrtc>=0.47
+aiortc>=1.6
+av>=10
+
+# --- Optional: if you see NumPy 2.x deprecation errors in older YOLOv5 ---
+# numpy<2.0

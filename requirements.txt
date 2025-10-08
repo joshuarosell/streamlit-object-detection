@@ -1,18 +1,24 @@
 # --- Streamlit app core ---
-streamlit>=1.33
+streamlit>=1.50
 
-# --- YOLOv5 ---
-# You cloned the YOLOv5 repo; install its deps first
--r yolov5/requirements.txt
-
-# IMPORTANT: Override OpenCV to headless (must come AFTER the line above)
-# to avoid GUI/GL issues on servers
+# --- Core YOLOv5 deps (adapted for server) ---
+# Use HEADLESS OpenCV to avoid libGL errors on cloud/server
 opencv-python-headless>=4.10.0
+numpy>=1.24
+Pillow
+PyYAML>=5.3
+scipy>=1.4
+tqdm>=4.41
+matplotlib>=3.2
+pandas
+seaborn
+
+# --- PyTorch CPU wheels (Cloud is CPU-only) ---
+# Let pip pick compatible wheels for your Python version
+torch
+torchvision
 
 # --- WebRTC / video ---
-streamlit-webrtc>=0.47
+streamlit-webrtc>=0.63
 aiortc>=1.6
 av>=10
-
-# --- Optional: if you see NumPy 2.x deprecation errors in older YOLOv5 ---
-# numpy<2.0

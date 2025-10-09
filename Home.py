@@ -4,16 +4,16 @@ st.set_page_config(page_title="Home",
                    layout='wide',
                    page_icon='./images/home.png')
 
-st.title("YOLO V5 Object Detection App")
-st.caption('This web application demonstrates Object Detection')
+st.title("📦YOLO Object Detection App")
+# st.caption('This web application demonstrates Object Detection')
 
 # Content
 st.markdown("""
-### This App detects objects from Images
-- Automatically detects 34 objects from image
+### This app detects from images, videos, and webcam stream.
+- Identifies selected grocery items.
 - [Click here for App](/YOLO_for_image/)  
 
-Below are the objects that our model will detect:
+Grocery items:
 1. coffee_nescafe
 2. coffee_kopiko
 3. Lucky-Me-Pancit-Canton

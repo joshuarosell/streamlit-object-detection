@@ -8,8 +8,8 @@ st.set_page_config(page_title="YOLO Object Detection",
                    layout='wide',
                    page_icon='./images/object.png')
 
-st.header('Get Object Detection for any Image')
-st.write('Please Upload Image to get detections')
+st.header('🖼️Object Detection for Image')
+st.write('Upload an image and run detections.')
 
 with st.spinner('Loading YOLO model...'):
     yolo = YOLO_Pred(onnx_model='./models/best.onnx', data_yaml='./models/data.yaml')
